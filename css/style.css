@@ -1,7 +1,84 @@
+/* Reset default margin and padding for a consistent layout */
 body {
-  background-color: black;
-  color: white;
-  font-family: Arial, sans-serif;
-  padding: 20px;
+  font-family: Arial, sans-serif; /* Sets the default font style */
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Centers text globally */
+}
 
+/* Header Styling */
+header {
+  display: flex; /* Uses flexbox for layout */
+  justify-content: space-between; /* Pushes content to opposite sides */
+  align-items: center; /* Aligns items vertically */
+  padding: 20px;
+  background-color: #f4f4f4; /* Light grey background */
+  border-bottom: 2px solid #ddd; /* Adds subtle bottom border */
+}
+
+/* Logo Styling */
+.logo {
+  max-width: 100x; /* Restricts logo size */
+}
+
+/* Navigation Bar Styling */
+nav {
+  background-color: #333; /* Dark background for contrast */
+  padding: 10px;
+}
+
+nav a {
+  color: white; /* Sets text color */
+  text-decoration: none; /* Removes underline from links */
+  margin: 10px; /* Adds spacing between links */
+}
+
+/* Main Content Section Styling */
+
+.content {
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 20px; /* Add space inside the main section */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center; /* Center text */
+  width: 100%; /* Full width */
+  max-width: 100%; /* Ensure it doesn't exceed the viewport*/
+  margin: 0 auto; /* Center horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border: 2px solid #2c3e50; /* Dark blue-gray border */
+}
+
+.content h2 {
+  color: #333; /* Dark gray color for heading */
+  font-size: 24px; /* Adjust font size */
+}
+
+.content p {
+  color: #666; /* Medium gray for paragraph text */
+  font-size: 16px; /* Adjust font size */
+  line-height: 1.5; /* Improve readability */
+  max-width: 80%; /* Limit text width for better readability */
+  margin: e auto; /* Center text */
+}
+
+
+.sections {
+  display: flex; /* Enables side-by-side layout */
+  justify-content: space-around; /* Spaces sections evenly */
+  padding: 20px;
+}
+
+/* Individual Section Styling */
+.section {
+  width: 45%; /* Sets equal width for both sections */
+  padding: 20px;
+  border: 1px solid #ddd; /* Adds subtle border */
+  background-color: #f9f9f9; /* Light background for readability */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333; /* Matches nav bar */
+  color: white; /* White text for contrast */
+  padding: 10px;
+  position: relative;
 }
