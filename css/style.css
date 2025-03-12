@@ -16,9 +16,10 @@ header {
   border-bottom: 2px solid #ddd; /* Adds subtle bottom border */
 }
 
-/* Logo Styling */
+/* Style the logo image */
 .logo {
-  max-width: 100x; /* Restricts logo size */
+  height: 40px; /* Adjust the height as per your logo's size */
+  width: auto;
 }
 
 /* Navigation Bar Styling */
