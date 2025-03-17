@@ -4,7 +4,7 @@
     <meta charset="UTF-8"> <!-- Sets the character encoding for the document -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper responsive behavior on mobile devices -->
     <title>MemberShip</title> <!-- Sets the title of the webpage -->
-    <link href="../css/style.css" rel="stylesheet"> <!-- Links the external CSS file -->
+    <link href="../css/styles.css" rel="stylesheet"> <!-- Links the external CSS file -->
     <script src="scripts/javascript.js"></script> <!-- Links the external JS file -->
   </head>
   <body>
@@ -189,69 +189,67 @@
             </div>
           </div>
           <div class="form-section">
-            <h3></h3>
-                                                <div class="form-group">
-                            <label for="interests">Interests</label>
-                            <div class="checkbox-group">
-                                <label class="checkbox">
-                                    <input type="checkbox" name="interests" value="language"> Language Classes
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" name="interests" value="culture"> Cultural Events
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" name="interests" value="cooking"> Slovak Cooking
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" name="interests" value="dance"> Traditional Dance
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" name="interests" value="music"> Folk Music
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" name="interests" value="history"> Slovak History
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="howHeard">How did you hear about us?</label>
-                            <select id="howHeard" name="howHeard">
-                                <option value="">Select an option</option>
-                                <option value="friend">Friend or Family</option>
-                                <option value="event">Community Event</option>
-                                <option value="social">Social Media</option>
-                                <option value="search">Search Engine</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="comments">Additional Comments</label>
-                            <textarea id="comments" name="comments" rows="4"></textarea>
-                        </div>
-                    </div>
- 
-                    <div class="form-section">
-                        <div class="form-group">
-                            <label class="checkbox">
-                                <input type="checkbox" name="terms" required>
-                                I agree to the <a href="#" class="text-link">Terms and Conditions</a> and <a href="#" class="text-link">Privacy Policy</a> *
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <label class="checkbox">
-                                <input type="checkbox" name="newsletter">
-                                I would like to receive the monthly newsletter
-                            </label>
-                        </div>
-                    </div>
- 
-                    <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Submit Registration</button>
-                        <button type="reset" class="btn btn-secondary">Reset Form</button>
-                    </div>
-                </form>
+            <h3>Membership Details</h3>
+            <div class="form-group">
+              <label for="interests">Interests</label>
+              <div class="checkbox-group">
+                <label class="checkbox">
+                  <input type="checkbox" name="interests" value="language"> Language Classes
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="interests" value="culture"> Cultural Events
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="interests" value="cooking"> Slovak Cooking
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="interests" value="dance"> Traditional Dance
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="interests" value="music"> Folk Music
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="interests" value="history"> Slovak History
+                </label>
+              </div>
             </div>
-        </section>
+            <div class="form-group">
+              <label for="howHeard">How did you hear about us?</label>
+              <select id="howHeard" name="howHeard">
+                <option value="">Select an option</option>
+                <option value="friend">Friend or Family</option>
+                <option value="event">Community Event</option>
+                <option value="social">Social Media</option>
+                <option value="search">Search Engine</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="comments">Additional Comments</label>
+              <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-group">
+              <label class="checkbox">
+                <input type="checkbox" name="terms" required>
+                I agree to the <a href="#" class="text-link">Terms and Conditions</a> and <a href="#" class="text-link">Privacy Policy</a> *
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="checkbox">
+                <input type="checkbox" name="newsletter">
+                I would like to receive the monthly newsletter
+              </label>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit Registration</button>
+            <button type="reset" class="btn btn-secondary">Reset Form</button>
+          </div>
+        </form>
+      </div>
+    </section>
     
     <!-- Footer Section -->
     <footer>
