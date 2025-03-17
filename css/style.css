@@ -74,6 +74,119 @@ nav a {
   padding: 20px;
 }
 
+:root {
+  --primary-color: #1e5b94;
+  --primary-dark: #0d4a7f;
+  --primary-light: #3a7cb5;
+  --secondary-color: #e63946;
+  --accent-color: #f1c40f;
+  --text-color: #333333;
+  --text-light: #666666;
+  --text-dark: #111111;
+  --background-color: #ffffff;
+  --background-alt: #f8f9fa;
+  --border-color: #dddddd;
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+  --warning-color: #f39c12;
+  --info-color: #3498db;
+ 
+  --slovak-blue: #0b4ea2;
+  --slovak-red: #ee1c25;
+  --slovak-white: #ffffff;
+ 
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+ 
+.benefit-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+ 
+.benefit-icon {
+  margin-bottom: 1.5rem;
+}
+ 
+.benefit-icon img {
+  height: 60px;
+}
+ 
+.membership-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+ 
+.membership-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+ 
+.membership-card.featured {
+  border: 2px solid var(--primary-color);
+  transform: scale(1.05);
+}
+ 
+.membership-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+ 
+.membership-header h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+ 
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+ 
+.price span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+ 
+.membership-features {
+  padding: 1.5rem;
+}
+ 
+.membership-features ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+ 
+.membership-features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  padding-left: 1.5rem;
+}
+ 
+.membership-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+}
+ 
+.membership-action {
+  padding: 0 1.5rem 1.5rem;
+  text-align: center;
+}
+
 /* Individual Section Styling */
 .section {
   width: 45%; /* Sets equal width for both sections */
