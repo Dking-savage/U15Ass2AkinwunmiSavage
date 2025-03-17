@@ -36,168 +36,161 @@
             <input type="text" name="username" placeholder="Username" required> <!-- Add an input field for the email -->
             <input type="email" name="email" placeholder="Email" required> <!-- Add an  input firld for the password -->
             <input type="password" name="password" placeholder="Password" required> <!-- Add a submit button -->
-            <button type="submit">Login</button>
-        </form>
+            <button type="submit">Login</button></form>
     </div>
-
-<section class="membership-types">
-  <div class="container">
-    <h2 class="section-title">Membership Options</h2>
-    <div class="membership-cards">
-      <div class="membership-card">
-        <div class="membership-header">
-          <h3>Individual</h3>
-          <p class="price">£30<span>/year</span></p>
-          </div>
-        <div class="membership-features">
-          <ul>
-            <li>Access to all community events</li>
-            <li>Discounted workshop rates</li>
-            <li>Monthly newsletter</li>
-            <li>Voting rights at annual meetings</li>
-            </ul>
+    <section class="membership-types">
+      <div class="container">
+        <h2 class="section-title">Membership Options</h2>
+        <div class="membership-cards">
+          <div class="membership-card">
+            <div class="membership-header">
+              <h3>Individual</h3>
+              <p class="price">£30<span>/year</span></p>
             </div>
-        <div class="membership-action">
-          <a href="#registration-form" class="btn btn-primary">Sign Up</a>
-          </div>
-          </div>
-      <div class="membership-card featured">
-        <div class="membership-header">
-          <h3>Family</h3>
-          <p class="price">£50<span>/year</span></p>
-          </div>
-        <div class="membership-features">
-          <ul>
-            <li>Covers 2 adults and up to 3 children</li>
-            <li>Access to all community events</li>
-            <li>Discounted workshop rates</li>
-            <li>Monthly newsletter</li>
-            <li>Voting rights at annual meetings</li>
-            <li>Priority registration for children's activities</li>
-            </ul>
+            <div class="membership-features">
+              <ul>
+                <li>Access to all community events</li>
+                <li>Discounted workshop rates</li>
+                <li>Monthly newsletter</li>
+                <li>Voting rights at annual meetings</li>
+              </ul>
             </div>
-        <div class="membership-action">
-          <a href="#registration-form" class="btn btn-primary">Sign Up</a>
+            <div class="membership-action">
+              <a href="#registration-form" class="btn btn-primary">Sign Up</a>
+            </div>
           </div>
-                    </div>
-                    <div class="membership-card">
-                        <div class="membership-header">
-                            <h3>Student/Senior</h3>
-                            <p class="price">£20<span>/year</span></p>
-                        </div>
-                        <div class="membership-features">
-                            <ul>
-                                <li>Valid student ID or age 65+</li>
-                                <li>Access to all community events</li>
-                                <li>Discounted workshop rates</li>
-                                <li>Monthly newsletter</li>
-                                <li>Voting rights at annual meetings</li>
-                            </ul>
-                        </div>
-                        <div class="membership-action">
-                            <a href="#registration-form" class="btn btn-primary">Sign Up</a>
-                        </div>
-                    </div>
+          <div class="membership-card featured">
+            <div class="membership-header">
+              <h3>Family</h3>
+              <p class="price">£50<span>/year</span></p>
+            </div>
+            <div class="membership-features">
+              <ul>
+                <li>Covers 2 adults and up to 3 children</li>
+                <li>Access to all community events</li>
+                <li>Discounted workshop rates</li>
+                <li>Monthly newsletter</li>
+                <li>Voting rights at annual meetings</li>
+                <li>Priority registration for children's activities</li>
+              </ul>
+            </div>
+            <div class="membership-action">
+              <a href="#registration-form" class="btn btn-primary">Sign Up</a>
+            </div>
+          </div>
+          <div class="membership-card">
+            <div class="membership-header">
+              <h3>Student/Senior</h3>
+              <p class="price">£20<span>/year</span></p>
+            </div>
+            <div class="membership-features">
+              <ul>
+                <li>Valid student ID or age 65+</li>
+                <li>Access to all community events</li>
+                <li>Discounted workshop rates</li>
+                <li>Monthly newsletter</li>
+                <li>Voting rights at annual meetings</li>
+              </ul>
+            </div>
+            <div class="membership-action">
+              <a href="#registration-form" class="btn btn-primary">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="registration-form" id="registration-form">
+      <div class="container">
+        <h2 class="section-title">Membership Registration</h2>
+        <form id="membershipForm" class="form">
+          <div class="form-section">
+            <h3>Personal Information</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" name="dob">
+            </div>
+          </div>
+          <div class="form-section">
+            <h3>Address</h3>
+            <div class="form-group">
+              <label for="address1">Address Line 1 *</label>
+              <input type="text" id="address1" name="address1" required>
+            </div>
+            <div class="form-group">
+              <label for="address2">Address Line 2</label>
+              <input type="text" id="address2" name="address2">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">City *</label>
+                <input type="text" id="city" name="city" required>
+              </div>
+              <div class="form-group">
+                <label for="postcode">Postcode *</label>
+                <input type="text" id="postcode" name="postcode" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <h3>Membership Details</h3>
+            <div class="form-group">
+              <label for="membershipType">Membership Type *</label>
+              <select id="membershipType" name="membershipType" required>
+                <option value="">Select Membership Type</option>
+                <option value="individual">Individual (£30/year)</option>
+                <option value="family">Family (£50/year)</option>
+                <option value="student">Student/Senior (£20/year)</option>
+              </select>
+            </div>
+            <div class="form-group family-members" id="familyMembersSection" style="display: none;">
+              <label>Family Members</label>
+              <div class="family-member-inputs">
+                <div class="family-member">
+                  <input type="text" name="familyMember1" placeholder="Family Member 1 (Name & Age)">
                 </div>
+                <div class="family-member">
+                  <input type="text" name="familyMember2" placeholder="Family Member 2 (Name & Age)">
+                </div>
+                <button type="button" class="btn btn-small" id="addFamilyMember">+ Add More</button>
+              </div>
             </div>
-        </section>
- 
-        <section class="registration-form" id="registration-form">
-            <div class="container">
-                <h2 class="section-title">Membership Registration</h2>
-                <form id="membershipForm" class="form">
-                    <div class="form-section">
-                        <h3>Personal Information</h3>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name *</label>
-                                <input type="text" id="lastName" name="lastName" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="dob">Date of Birth</label>
-                            <input type="date" id="dob" name="dob">
-                        </div>
-                    </div>
- 
-                    <div class="form-section">
-                        <h3>Address</h3>
-                        <div class="form-group">
-                            <label for="address1">Address Line 1 *</label>
-                            <input type="text" id="address1" name="address1" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="address2">Address Line 2</label>
-                            <input type="text" id="address2" name="address2">
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="city">City *</label>
-                                <input type="text" id="city" name="city" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="postcode">Postcode *</label>
-                                <input type="text" id="postcode" name="postcode" required>
-                            </div>
-                        </div>
-                    </div>
- 
-                    <div class="form-section">
-                        <h3>Membership Details</h3>
-                        <div class="form-group">
-                            <label for="membershipType">Membership Type *</label>
-                            <select id="membershipType" name="membershipType" required>
-                                <option value="">Select Membership Type</option>
-                                <option value="individual">Individual (£30/year)</option>
-                                <option value="family">Family (£50/year)</option>
-                                <option value="student">Student/Senior (£20/year)</option>
-                            </select>
-                        </div>
-                        <div class="form-group family-members" id="familyMembersSection" style="display: none;">
-                            <label>Family Members</label>
-                            <div class="family-member-inputs">
-                                <div class="family-member">
-                                    <input type="text" name="familyMember1" placeholder="Family Member 1 (Name & Age)">
-                                </div>
-                                <div class="family-member">
-                                    <input type="text" name="familyMember2" placeholder="Family Member 2 (Name & Age)">
-                                </div>
-                                <button type="button" class="btn btn-small" id="addFamilyMember">+ Add More</button>
-                            </div>
-                        </div>
-                    </div>
- 
-                    <div class="form-section">
-                        <h3>Social Media (Optional)</h3>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="facebook">Facebook</label>
-                                <input type="text" id="facebook" name="facebook" placeholder="Facebook profile URL">
-                            </div>
-                            <div class="form-group">
-                                <label for="instagram">Instagram</label>
-                                <input type="text" id="instagram" name="instagram" placeholder="Instagram handle">
-                            </div>
-                        </div>
-                    </div>
- 
-                    <div class="form-section">
-                        <h3>Additional Information</h3>
-                        <div class="form-group">
+          </div>
+          <div class="form-section">
+            <h3>Social Media (Optional)</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="facebook">Facebook</label>
+                <input type="text" id="facebook" name="facebook" placeholder="Facebook profile URL">
+              </div>
+              <div class="form-group">
+                <label for="instagram">Instagram</label>
+                <input type="text" id="instagram" name="instagram" placeholder="Instagram handle">
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <h3></h3>
+                                                <div class="form-group">
                             <label for="interests">Interests</label>
                             <div class="checkbox-group">
                                 <label class="checkbox">
