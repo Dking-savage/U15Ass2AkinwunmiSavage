@@ -83,7 +83,7 @@ nav a {
  
 .memory-card {
   aspect-ratio: 1;
-  background-color: #00FFFF;
+  background-color: #00ffff;
   border-radius: 4px;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -91,7 +91,7 @@ nav a {
  
 .memory-card.flipped {
   transform: rotateY(360deg);
-  background-color: gray;
+  background-color: #808080;
 }
  
 .game-controls {
