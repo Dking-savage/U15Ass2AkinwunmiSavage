@@ -1,84 +1,94 @@
-  <!-- Main Content Area with Content -->
-<!-- HTML Document Start -->
+  <!-- HTML Document Start -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Meta Tags for Proper Rendering and Responsiveness -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Posts</title>
-    <!-- Link to Tailwind CSS for Styling -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <style>
-        /* Custom Font Style for the Document */
-        body { font-family: Arial, sans-serif; }
-    </style>
+  <head>
+     <!-- Meta Tags for Proper Rendering and Responsiveness -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper responsive behavior on mobile devices -->
+    <title>Blog</title> <!-- Sets the title of the webpage -->
+    <script src="scripts/javascript.js"></script> <!-- Links the external JS file -->
+  </head>
+  <body>
+    
+    <!-- Header Section with Logo -->
+    <header>
+      <h1>Slovenské Vzdelávacie Centrum Manchester</h1> <!-- Main title of the website -->
+      <div>
+        <style>
+          .logo-container {
+  position: absolute;
+  top: 10px; 
+  right: 20px;
+.logo {
+  height: 40px; 
+  width: auto;
+}
+nav {
+  background-color: #333; 
+  padding: 10px;
+} 
+        </style>
+      </div>
+      <img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/481827793_122180921528248952_4409127040710097368_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=-OJY9zQ94eEQ7kNvgEUqiPn&_nc_oc=AdlVQw3d4cGDovMjRikbkyynN04bOJr4vtQZdn6G3_6sqTu4G4N62YGTF6Eb6VXSudE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&_nc_gid=WhgrlcgpbYLAlz6FitV03g&oh=00_AYEdXC8FRU08Y6GtHzrOHUUdY7MAlzEd0fPC2S5TnXqUBQ&oe=67E4B6B8" alt="Logo" class="logo"> <!-- Displays a logo image aligned to the right -->
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="../index.html">Home</a> <!-- Navigation link to Home page -->
+      <a href="aboutus.html">AboutUs</a> <!-- Navigation link to About page -->
+      <a href="members.html">Members</a> <!-- Navigation link to Membership page -->
+      <a href="services.html">Services</a> <!-- Navigation link to Service page -->
+      <a href="blog.html">Blogs</a> <!-- Navigation link to Blog page -->
+      <a href="events.html">Events</a> <!-- Navigation link to Event page -->
+    </nav>
 </head>
-<body class="bg-gray-100">
     <!-- Main Container -->
-    <div class="container mx-auto p-6">
+    <div style="max-width: 1200px; margin: auto; padding: 1.5rem;">
         <!-- Page Title -->
-        <h1 class="text-4xl font-bold mb-6">All Posts</h1>
-        <div class="space-y-8">
+        <h1 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 1.5rem;">All Posts</h1>
+        <div style="margin-top: 2rem;">
 
             <!-- Post 1 -->
-            <div class="flex flex-col md:flex-row shadow-lg rounded-2xl bg-white overflow-hidden">
-                <!-- Post Image -->
-                <img src="https://static.wixstatic.com/media/d9a34d_403ff694c31740598850c0ae518b5358~mv2.png/v1/fill/w_454,h_341,fp_0.50_0.50,q_95,enc_auto/d9a34d_403ff694c31740598850c0ae518b5358~mv2.png" alt="Join Savage Charity" class="w-full md:w-1/3 h-64 object-cover">
-                <div class="p-6 flex flex-col justify-between w-full">
-                    <div>
-                        <!-- Author Info -->
-                        <div class="flex items-center mb-2">
-                            <div class="mr-2 rounded-full bg-gray-300 w-8 h-8"></div>  <!-- Placeholder for Avatar -->
-                            <p class="text-sm text-gray-500">Akinwunmi Savage • Mar 10 • 2 min read</p>
-                        </div>
-                        <!-- Post Title -->
-                        <h2 class="text-2xl font-bold mb-2">Join Savage Charity: Empowering the Slovak Community</h2>
-                        <!-- Post Description -->
-                        <p class="text-gray-700 mb-4">Have you ever wanted to be a part of a community that’s dedicated to preserving cultural traditions and empowering its members? Look no... <a href="#" style="color: blue;">Read More</a></p>
-                    </div>
-                    <!-- Post Stats (Views and Comments) -->
+            <div style="display: flex; flex-direction: column; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); border-radius: 1rem; background-color: #ffffff; overflow: hidden;">
+                <img src="https://static.wixstatic.com/media/d9a34d_403ff694c31740598850c0ae518b5358~mv2.png" alt="Join Savage Charity" style="width: 100%; height: 16rem; object-fit: cover;">
+                <div style="padding: 1.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700;">Join Savage Charity: Empowering the Slovak Community</h2>
+                    <p>Have you ever wanted to be a part of a community that’s dedicated to preserving cultural traditions and empowering its members? Look no...</p>
+                  <a href="../read.html">Read More</a>
+                   <!-- Post Stats (Views and Comments) -->
                     <div class="flex items-center justify-between text-gray-500">
-                        <span>10M views • 100k comments</span>
+                        <span>20M views • 500k comments</span>
                         <span>&#9829;</span> <!-- Heart Icon -->
                     </div>
                 </div>
             </div>
 
             <!-- Post 2 -->
-            <div class="flex flex-col md:flex-row shadow-lg rounded-2xl bg-white overflow-hidden">
-                <img src="https://static.wixstatic.com/media/d9a34d_08d88a25f2484606b79823b08c22fd91~mv2.png/v1/fill/w_454,h_341,fp_0.50_0.50,q_95,enc_auto/d9a34d_08d88a25f2484606b79823b08c22fd91~mv2.png" alt="Uniting Slovak Culture" class="w-full md:w-1/3 h-64 object-cover" alt="Uniting Slovak Culture" class="w-full md:w-1/3 h-64 object-cover">
-                <div class="p-6 flex flex-col justify-between w-full">
-                    <div>
-                        <div class="flex items-center mb-2">
-                            <div class="mr-2 rounded-full bg-gray-300 w-8 h-8"></div>
-                            <p class="text-sm text-gray-500">Akinwunmi Savage • Mar 10 • 2 min read</p>
-                        </div>
-                        <h2 class="text-2xl font-bold mb-2">Uniting Slovak Culture Through Educational Workshops</h2>
-                        <p class="text-gray-700 mb-4">In the vibrant and diverse community of South Manchester, Savage Charity stands out as a beacon of unity and cultural preservation for...<a href="#" style="color: blue;">Read More</a></p>
-                    </div>
+            <div style="display: flex; flex-direction: column; margin-top: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); border-radius: 1rem; background-color: #ffffff; overflow: hidden;">
+                <img src="https://static.wixstatic.com/media/d9a34d_08d88a25f2484606b79823b08c22fd91~mv2.png" alt="Uniting Slovak Culture" style="width: 100%; height: 16rem; object-fit: cover;">
+                <div style="padding: 1.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700;">Uniting Slovak Culture Through Educational Workshops</h2>
+                    <p>In the vibrant and diverse community of South Manchester, Savage Charity stands out as a beacon of unity and cultural preservation for... </p>
+                      <a href="../more.html">Read More</a>
+                   <!-- Post Stats (Views and Comments) -->
                     <div class="flex items-center justify-between text-gray-500">
-                        <span>12.5M view • 120k comments</span>
-                        <span>&#9829;</span>
+                        <span>20M views • 500k comments</span>
+                        <span>&#9829;</span> <!-- Heart Icon -->
                     </div>
                 </div>
             </div>
 
             <!-- Post 3 -->
-            <div class="flex flex-col md:flex-row shadow-lg rounded-2xl bg-white overflow-hidden">
-                <img src="https://static.wixstatic.com/media/d9a34d_5bf0059b43084ccdb2fc4e287eb25333~mv2.png/v1/fill/w_454,h_341,fp_0.50_0.50,q_95,enc_auto/d9a34d_5bf0059b43084ccdb2fc4e287eb25333~mv2.png" alt="Empowering Slovak Community" class="w-full md:w-1/3 h-64 object-cover" alt="Empowering Slovak Community" class="w-full md:w-1/3 h-64 object-cover">
-                <div class="p-6 flex flex-col justify-between w-full">
-                    <div>
-                        <div class="flex items-center mb-2">
-                            <div class="mr-2 rounded-full bg-gray-300 w-8 h-8"></div>
-                            <p class="text-sm text-gray-500">Akinwunmi Savage • Mar 10 • 2 min read</p>
-                        </div>
-                        <h2 class="text-2xl font-bold mb-2">Empowering the Slovak Community in South Manchester</h2>
-                        <p class="text-gray-700 mb-4">In the vibrant community of South Manchester, a dedicated team of volunteers at Savage Charity is working tirelessly to empower and unite...</p>
-                    </div>
+            <div style="display: flex; flex-direction: column; margin-top: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); border-radius: 1rem; background-color: #ffffff; overflow: hidden;">
+                <img src="https://static.wixstatic.com/media/d9a34d_5bf0059b43084ccdb2fc4e287eb25333~mv2.png" alt="Empowering Slovak Community" style="width: 100%; height: 16rem; object-fit: cover;">
+                <div style="padding: 1.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700;">Empowering the Slovak Community in South Manchester</h2>
+                    <p>In the vibrant community of South Manchester, a dedicated team of volunteers at Savage Charity is working tirelessly to empower and unite...</p>
+                      <a href="../readmore.html">Read More</a>
+                   <!-- Post Stats (Views and Comments) -->
                     <div class="flex items-center justify-between text-gray-500">
-                        <span>15M views • 200k comments</span>
-                        <span>&#9829;</span>
+                        <span>20M views • 500k comments</span>
+                        <span>&#9829;</span> <!-- Heart Icon -->
                     </div>
                 </div>
             </div>
@@ -87,4 +97,8 @@
     </div>
 </body>
 </html>
-<!-- HTML Document End -->
+<footer>
+    <p>&copy; 2025 Simple Layout. All rights reserved.</p> <!-- Footer copyright information -->
+  </footer>
+</body>
+</html>
