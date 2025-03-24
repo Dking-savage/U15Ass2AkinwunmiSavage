@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Sets the character encoding for the document -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper responsive behavior on mobile devices -->
+  <title>Date and Fees</title> <!-- Sets the title of the Webpage -->
+  <link href="../css/colors.css" rel="stylesheet"> <!-- Links the external CSS file -->
+  <script src="scripts/javascript.js"></script> <!-- Links the external JS file -->
+</head>
+<body>
+  <!-- Header Section with Logo -->
+  <header>
+    <h1>Slovenské Vzdelávacie Centrum Manchester</h1> <!-- Main title of the website -->
+   <!-- Logo on the top right corner -->
+<div class="logo-container">
+<img src="https://scontent-man2-1.xx.fbcdn.net/v/t39.30808-6/481827793_122180921528248952_4409127040710097368_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=-OJY9zQ94eEQ7kNvgEUqiPn&_nc_oc=AdlVQw3d4cGDovMjRikbkyynN04bOJr4vtQZdn6G3_6sqTu4G4N62YGTF6Eb6VXSudE&_nc_zt=23&_nc_ht=scontent-man2-1.xx&_nc_gid=WhgrlcgpbYLAlz6FitV03g&oh=00_AYEdXC8FRU08Y6GtHzrOHUUdY7MAlzEd0fPC2S5TnXqUBQ&oe=67E4B6B8" alt="Logo" class="logo">
+</div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="../index.html">Home</a> <!-- Navigation link to Home page -->
+    <a href="pages/aboutus.html">AboutUs</a> <!-- Navigation link to About page -->
+    <a href="pages/members.html">Members</a> <!-- Navigation link to Membership page -->
+    <a href="pages/services.html">Services</a> <!-- Navigation link to Service page -->
+    <a href="pages/games.html">Education games</a> <!-- Navigation link to Blog page -->
+    <a href="pages/events.html">Events</a> <!-- Navigation link to Event page -->
+  </nav>
+
+    <div class="sections"> <!-- Container to hold two sections side by side -->
+      <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Dates & Fees</h2>
+                <p>Information about our upcoming events, classes, and associated costs</p>
+            </div>
+        </section>
+ 
+        <section class="calendar">
+            <div class="container">
+                <h2 class="section-title">Upcoming Events Calendar</h2>
+                <div class="calendar-controls">
+                    <button id="prevMonth" class="btn btn-small">Previous Month</button>
+                    <h3 id="currentMonth">June 2019</h3>
+                    <button id="nextMonth" class="btn btn-small">Next Month</button>
+                </div>
+                <div class="calendar-grid" id="calendarGrid">
+                </div>
+                <div class="calendar-legend">
+                    <div class="legend-item">
+                        <span class="legend-color cultural"></span>
+                        <span>Cultural Events</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color language"></span>
+                        <span>Language Classes</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color workshop"></span>
+                        <span>Workshops</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color community"></span>
+                        <span>Community Meetings</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <section class="upcoming-events">
+            <div class="container">
+                <h2 class="section-title">Upcoming Events</h2>
+                <div class="events-list">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">Jun</span>
+                            <span class="year">2025</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Summer Festival</h3>
+                            <p class="event-time"><strong>Time:</strong> 12:00 PM - 6:00 PM</p>
+                            <p class="event-location"><strong>Location:</strong> Wythenshawe Park, Manchester</p>
+                            <p>Celebrate Slovak traditions with food, music, and dance performances.</p>
+                            <div class="event-fee">
+                                <p><strong>Fee:</strong> £5 (Members), £8 (Non-members), Children under 12 free</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">22</span>
+                            <span class="month">Jun</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Language Workshop: Beginner Slovak</h3>
+                            <p class="event-time"><strong>Time:</strong> 6:30 PM - 8:00 PM</p>
+                            <p class="event-location"><strong>Location:</strong> Community Center, Didsbury</p>
+                            <p>Introduction to Slovak language for beginners. No prior knowledge required.</p>
+                            <div class="event-fee">
+                                <p><strong>Fee:</strong> £8 (Members), £12 (Non-members)</p>
+                               <Button className="mt-4 border border-white text-white">View course</Button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">29</span>
+                            <span class="month">Jun</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Traditional Cooking Class: Slovak Dumplings</h3>
+                            <p class="event-time"><strong>Time:</strong> 5:00 PM - 7:30 PM</p>
+                            <p class="event-location"><strong>Location:</strong> Community Kitchen, Stockport</p>
+                            <p>Learn how to make traditional Slovak dumplings (bryndzové halušky).</p>
+                            <div class="event-fee">
+                                <p><strong>Fee:</strong> £15 (Members), £20 (Non-members), includes ingredients</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">5</span>
+                            <span class="month">Jul</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Children's Folk Dance Workshop</h3>
+                            <p class="event-time"><strong>Time:</strong> 10:00 AM - 11:30 AM</p>
+                            <p class="event-location"><strong>Location:</strong> Dance Studio, Chorlton</p>
+                            <p>Traditional Slovak folk dance lessons for children ages 5-12.</p>
+                            <div class="event-fee">
+                                <p><strong>Fee:</strong> £6 (Members), £10 (Non-members)</p>
+                               <Button className="mt-4 border border-white text-white">View Course</Button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <section class="regular-classes">
+            <div class="container">
+                <h2 class="section-title">Regular Classes</h2>
+                <div class="classes-grid">
+                    <div class="class-card">
+                        <div class="class-header">
+                            <h3>Slovak Language Classes</h3>
+                        </div>
+                        <div class="class-content">
+                            <div class="class-schedule">
+                                <h4>Schedule:</h4>
+                                <ul>
+                                    <li><strong>Beginners:</strong> Thursdays, 6:30 PM - 8:00 PM</li>
+                                    <li><strong>Intermediate:</strong> Tuesdays, 6:30 PM - 8:00 PM</li>
+                                    <li><strong>Advanced:</strong> Mondays, 6:30 PM - 8:00 PM</li>
+                                    <li><strong>Children (5-12):</strong> Saturdays, 10:00 AM - 11:30 AM</li>
+                                </ul>
+                            </div>
+                            <div class="class-fees">
+                                <h4>Fees:</h4>
+                                <ul>
+                                    <li><strong>Members:</strong> £8 per class or £70 for 10 classes</li>
+                                    <li><strong>Non-members:</strong> £12 per class or £100 for 10 classes</li>
+                                    <li><strong>Children's classes:</strong> £6 per class for members, £10 for non-members</li>
+                                </ul>
+                            </div>
+                            <div class="class-location">
+                                <h4>Location:</h4>
+                                <p>Community Center, Didsbury, Manchester</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-header">
+                            <h3>Folk Dance Workshops</h3>
+                        </div>
+                        <div class="class-content">
+                            <div class="class-schedule">
+                                <h4>Schedule:</h4>
+                                <ul>
+                                    <li><strong>Adults:</strong> Wednesdays, 7:00 PM - 8:30 PM</li>
+                                    <li><strong>Children (5-12):</strong> Saturdays, 12:00 PM - 1:00 PM</li>
+                                </ul>
+                            </div>
+                            <div class="class-fees">
+                                <h4>Fees:</h4>
+                                <ul>
+                                    <li><strong>Members:</strong> £7 per class or £60 for 10 classes</li>
+                                    <li><strong>Non-members:</strong> £10 per class or £85 for 10 classes</li>
+                                    <li><strong>Children's classes:</strong> £5 per class for members, £8 for non-members</li>
+                                </ul>
+                            </div>
+                            <div class="class-location">
+                                <h4>Location:</h4>
+                                <p>Dance Studio, Chorlton, Manchester</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-header">
+                            <h3>Slovak Cooking Classes</h3>
+                        </div>
+                        <div class="class-content">
+                            <div class="class-schedule">
+                                <h4>Schedule:</h4>
+                                <ul>
+                                    <li>Last Thursday of each month, 5:00 PM - 7:30 PM</li>
+                                </ul>
+                            </div>
+                            <div class="class-fees">
+                                <h4>Fees:</h4>
+                                <ul>
+                                    <li><strong>Members:</strong> £15 per class (includes ingredients)</li>
+                                    <li><strong>Non-members:</strong> £20 per class (includes ingredients)</li>
+                                </ul>
+                            </div>
+                            <div class="class-location">
+                                <h4>Location:</h4>
+                                <p>Community Kitchen, Stockport</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <section class="membership-fees">
+            <div class="container">
+                <h2 class="section-title">Membership Fees</h2>
+                <div class="fees-table-container">
+                    <table class="fees-table">
+                        <thead>
+                            <tr>
+                                <th>Membership Type</th>
+                                <th>Annual Fee</th>
+                                <th>Benefits</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Individual</td>
+                                <td>£30</td>
+                                <td>
+                                    <ul>
+                                        <li>Access to all community events</li>
+                                        <li>Discounted workshop rates</li>
+                                        <li>Monthly newsletter</li>
+                                        <li>Voting rights at annual meetings</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Family</td>
+                                <td>£50</td>
+                                <td>
+                                    <ul>
+                                        <li>Covers 2 adults and up to 3 children</li>
+                                        <li>Access to all community events</li>
+                                        <li>Discounted workshop rates</li>
+                                        <li>Monthly newsletter</li>
+                                        <li>Voting rights at annual meetings</li>
+                                        <li>Priority registration for children's activities</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Student/Senior</td>
+                                <td>£20</td>
+                                <td>
+                                    <ul>
+                                        <li>Valid student ID or age 65+</li>
+                                        <li>Access to all community events</li>
+                                        <li>Discounted workshop rates</li>
+                                        <li>Monthly newsletter</li>
+                                        <li>Voting rights at annual meetings</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="fees-note">
+                    <p>Membership is valid for one year from the date of registration. Renewal notices will be sent one month before expiration.</p>
+                    <a href="membership.html" class="btn btn-primary">Join Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+  <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 Simple Layout. All rights reserved.</p> <!-- Footer copyright information -->
+    </footer>
+  </body>
+</html>
