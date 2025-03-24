@@ -1,1 +1,225 @@
-
+:root {
+  --primary-color: #1e5b94;
+  --primary-dark: #0d4a7f;
+  --primary-light: #3a7cb5;
+  --secondary-color: #e63946;
+  --accent-color: #f1c40f;
+  --text-color: #333333;
+  --text-light: #666666;
+  --text-dark: #111111;
+  --background-color: #ffffff;
+  --background-alt: #f8f9fa;
+  --border-color: #dddddd;
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+  --warning-color: #f39c12;
+  --info-color: #3498db;
+ 
+  --slovak-blue: #0b4ea2;
+  --slovak-red: #ee1c25;
+  --slovak-white: #ffffff;
+  
+  .calendar-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+ 
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+ 
+.calendar-day {
+  background-color: white;
+  border-radius: 4px;
+  padding: 0.5rem;
+  min-height: 100px;
+  border: 1px solid var(--border-color);
+}
+ 
+.calendar-day.empty {
+  background-color: transparent;
+  border: none;
+}
+ 
+.calendar-day.today {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(30, 91, 148, 0.2);
+}
+ 
+.day-number {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+ 
+.day-event {
+  font-size: 0.75rem;
+  padding: 0.25rem;
+  border-radius: 2px;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+ 
+.day-event.cultural {
+  background-color: rgba(230, 57, 70, 0.1);
+  color: var(--secondary-color);
+}
+ 
+.day-event.language {
+  background-color: rgba(30, 91, 148, 0.1);
+  color: var(--primary-color);
+}
+ 
+.day-event.workshop {
+  background-color: rgba(241, 196, 15, 0.1);
+  color: var(--accent-color);
+}
+ 
+.day-event.community {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: var(--success-color);
+}
+ 
+.calendar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+ 
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+ 
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+ 
+.legend-color.cultural {
+  background-color: rgba(230, 57, 70, 0.1);
+  border: 1px solid var(--secondary-color);
+}
+ 
+.legend-color.language {
+  background-color: rgba(30, 91, 148, 0.1);
+  border: 1px solid var(--primary-color);
+}
+ 
+.legend-color.workshop {
+  background-color: rgba(241, 196, 15, 0.1);
+  border: 1px solid var(--accent-color);
+}
+ 
+.legend-color.community {
+  background-color: rgba(46, 204, 113, 0.1);
+  border: 1px solid var(--success-color);
+}
+ 
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+ 
+.event-item {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+}
+ 
+.event-fee {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+ 
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+ 
+.class-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+ 
+.class-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+ 
+.class-header h3 {
+  color: white;
+  margin-bottom: 0;
+}
+ 
+.class-content {
+  padding: 1.5rem;
+}
+ 
+.class-schedule,
+.class-fees,
+.class-location {
+  margin-bottom: 1.5rem;
+}
+ 
+.class-schedule:last-child,
+.class-fees:last-child,
+.class-location:last-child {
+  margin-bottom: 0;
+}
+ 
+.class-schedule h4,
+.class-fees h4,
+.class-location h4 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+ 
+.fees-table-container {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+ 
+.fees-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+ 
+.fees-table th,
+.fees-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+ 
+.fees-table th {
+  background-color: var(--primary-color);
+  color: white;
+}
+ 
+.fees-table tr:nth-child(even) {
+  background-color: var(--background-alt);
+}
+ 
+.fees-note {
+  text-align: center;
+  padding: 20px;
+}
