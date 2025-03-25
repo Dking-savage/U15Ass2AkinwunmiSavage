@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const resetGameBtn = document.getElementById('reset-game');
     if (memoryGame && startGameBtn && resetGameBtn) {
         const wordPairs = [
-            { slovak: 'Ahoj', english: 'Hello' },
+            { slovak: 'Ahoj', english: 'Goodbye' },
             { slovak: 'Ďakujem', english: 'Thank you' },
             { slovak: 'Prosím', english: 'Please' },
             { slovak: 'Áno', english: 'Yes' },
             { slovak: 'Nie', english: 'No' },
-            { slovak: 'Dobrý deň', english: 'Good day' }
+            { slovak: 'Dobrý deň', english: 'Hello' }
         ];
         let cards = [];
         let flippedCards = [];
