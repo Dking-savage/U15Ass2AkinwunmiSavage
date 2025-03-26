@@ -201,4 +201,8 @@ footer {
   color: white; /* White text for contrast */
   padding: 10px;
   position: relative;
+  .social-icons img {
+   width: 30px;
+   height: 30px;
+   margin: 0 5px;
 }
