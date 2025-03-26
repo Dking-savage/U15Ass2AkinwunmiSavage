@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Ticket Booking</title>
     <style>
+        /* Basic styling for the page */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f4f4f9;
         }
+        
+        /* Styling for the seating plan grid */
         .seating-plan {
             display: grid;
             grid-template-columns: repeat(8, 1fr);
@@ -22,8 +25,9 @@
             border-radius: 15px;
             box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
         }
+        
+        /* Styling for each booth */
         .booth {
-            background: linear-gradient(135deg, #ff9800, #ff5722);
             padding: 20px;
             text-align: center;
             cursor: pointer;
@@ -35,79 +39,55 @@
             transition: all 0.3s ease;
             box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
         }
-        .booth:hover {
-            transform: scale(1.2);
-            background: linear-gradient(135deg, #ff5722, #e65100);
-        }
-        .selected {
-            background: linear-gradient(135deg, #4caf50, #388e3c);
-            transform: scale(1.2);
-        }
-        .booked {
-            background: linear-gradient(135deg, #d32f2f, #b71c1c);
-            cursor: not-allowed;
-            text-decoration: line-through;
-            box-shadow: none;
-        }
-        .checkout-section {
-            display: none;
-            margin-top: 20px;
-            background: #fff;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
-        }
-        button {
-            background: linear-gradient(135deg, #6200ea, #3700b3);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 18px;
-            margin-top: 20px;
-            transition: background 0.3s, transform 0.2s;
-        }
-        button:hover {
-            background: linear-gradient(135deg, #3700b3, #1a237e);
-            transform: scale(1.1);
-        }
+        
+        /* Styles for selected and booked seats */
+        .selected { background-color: #4caf50; transform: scale(1.2); }
+        .booked { background-color: #d32f2f; cursor: not-allowed; text-decoration: line-through; box-shadow: none; }
+        
+        /* Checkout section styling */
+        .checkout-section { display: none; margin-top: 20px; background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); }
+        .hidden { display: none; }
+        
+        /* Button styling */
+        button { background: #6200ea; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-size: 18px; transition: background 0.3s, transform 0.2s; }
+        button:hover { background: #3700b3; transform: scale(1.1); }
     </style>
 </head>
 <body>
     <h2>Event Ticket Booking</h2>
-    <div class="seating-plan">
-        <script>
-            document.write('<div class="seating-plan">');
-            for (let i = 1; i <= 40; i++) {
-                document.write(`<div class='booth' data-id='${i}'>Booth ${i}</div>`);
-            }
-            document.write('</div>');
-        </script>
-    </div>
+    <div class="seating-plan" id="seatingPlan"></div>
     <button onclick="bookSeats()">Book Selected Seats</button>
-    
     <h2>Basket</h2>
     <ul id="basket"></ul>
     <div id="totalPrice"></div>
-    
     <div class="checkout-section" id="checkoutSection">
         <h2>Proceed to Checkout</h2>
         <button onclick="proceedToPayment()">Proceed to Payment</button>
     </div>
-    
+    <button id="refreshBtn" class="hidden" onclick="refreshPage()">Refresh</button>
     <script>
-        const booths = document.querySelectorAll(".booth");
-        const basket = document.getElementById("basket");
-        const totalPriceDisplay = document.getElementById("totalPrice");
-        const checkoutSection = document.getElementById("checkoutSection");
-        let selectedSeats = [];
-
-        booths.forEach(booth => {
-            booth.dataset.price = Math.floor(Math.random() * 50) + 50;
-            booth.addEventListener("click", () => toggleSeat(booth));
-        });
-
+        // Array of colors for booths
+        const colors = ["blue", "red", "green", "orange", "purple", "yellow", "black", "pink", "cyan", "magenta", "lime", "teal", "navy", "brown", "gold", "silver", "maroon", "indigo", "violet"];
+        let selectedSeats = [], bookedSeats = [];
+        let currentColorIndex = Math.floor(Math.random() * colors.length);
+        const seatingPlan = document.getElementById("seatingPlan");
+        
+        // Function to create seat elements dynamically
+        function createSeats() {
+            seatingPlan.innerHTML = "";
+            for (let i = 1; i <= 40; i++) {
+                const booth = document.createElement("div");
+                booth.classList.add("booth");
+                booth.dataset.id = i;
+                booth.dataset.price = Math.floor(Math.random() * 50) + 50;
+                booth.innerText = `Booth ${i}`;
+                booth.style.backgroundColor = colors[currentColorIndex];
+                booth.addEventListener("click", () => toggleSeat(booth));
+                seatingPlan.appendChild(booth);
+            }
+        }
+        
+        // Function to toggle seat selection
         function toggleSeat(booth) {
             if (!booth.classList.contains("booked")) {
                 booth.classList.toggle("selected");
@@ -121,8 +101,11 @@
                 updateBasket();
             }
         }
-
+        
+        // Function to update the basket with selected seats
         function updateBasket() {
+            const basket = document.getElementById("basket");
+            const totalPriceDisplay = document.getElementById("totalPrice");
             basket.innerHTML = "";
             let total = 0;
             selectedSeats.forEach(seat => {
@@ -133,31 +116,45 @@
             });
             totalPriceDisplay.innerText = selectedSeats.length ? `Total Price: $${total}` : "";
         }
-
+        
+        // Function to book selected seats
         function bookSeats() {
-            if (selectedSeats.length === 0) {
-                alert("No seats selected.");
-                return;
-            }
+            if (selectedSeats.length === 0) { alert("No seats selected."); return; }
             selectedSeats.forEach(seat => {
                 const boothElement = document.querySelector(`.booth[data-id='${seat.seatNumber}']`);
                 boothElement.classList.remove("selected");
                 boothElement.classList.add("booked");
+                bookedSeats.push(seat.seatNumber);
             });
+            selectedSeats = [];
+            updateBasket();
             alert("Seats booked successfully! Click OK to proceed to checkout.");
-            checkoutSection.style.display = "block";
-            setTimeout(() => {
-                window.location.href = '#checkoutSection';
-            }, 500);
+            document.getElementById("checkoutSection").style.display = "block";
         }
-
+        
+        // Function to handle payment confirmation
         function proceedToPayment() {
-            const totalPrice = selectedSeats.reduce((sum, seat) => sum + Number(seat.price), 0);
-            alert(`Proceeding to payment. Total: $${totalPrice}`);
-            setTimeout(() => {
-                alert("Payment confirmed. Thank you for your booking!");
-            }, 500);
+            alert("Payment confirmed. Thank you for your booking!");
+            if (bookedSeats.length === 40) {
+                alert("No seats available.");
+                document.getElementById("refreshBtn").classList.remove("hidden");
+            }
         }
+        
+        // Function to refresh and reset the seat bookings
+        function refreshPage() {
+            bookedSeats = [];
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+            createSeats();
+            document.getElementById("refreshBtn").classList.add("hidden");
+            document.getElementById("checkoutSection").style.display = "none";
+            document.getElementById("basket").innerHTML = "";
+            document.getElementById("totalPrice").innerText = "";
+        }
+        
+        // Initialize the seating plan on page load
+        createSeats();
     </script>
 </body>
 </html>
+
